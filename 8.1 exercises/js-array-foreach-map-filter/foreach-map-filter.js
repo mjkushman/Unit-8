@@ -80,15 +80,14 @@ Examples:
 
 function vowelCount(str){
     let vowelObject = {}
-    // console.log('test string is ' +str)
-    Array.from(str).forEach(function(ltr){
-        // console.log('this is the ltr '+ltr)
-        if(vowels.includes(ltr)){
-            
+    console.log('test string is ' +str)
+    Array.from(str).forEach(function(ltr){ // turn string into an array. Perform forEach on each letter
+        console.log('this is the ltr '+ltr)
+        if(vowels.includes(ltr)){  // check to see if this letter (ltr) is a vowel
             if(vowelObject[ltr] == null){
-                vowelObject[ltr] = 1;}
+                vowelObject[ltr] = 1;} // if letter doesn't exist in the new object, set value to 1
              else {
-                vowelObject[ltr]++}
+                vowelObject[ltr]++} // if letter already exists in the new object, increment the value by 1
         }
     })
     return vowelObject;
